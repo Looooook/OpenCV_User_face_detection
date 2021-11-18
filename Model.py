@@ -26,11 +26,12 @@ class Model(torch.nn.Module):
         self.linear2 = torch.nn.Linear(3072, 512)
         # self.linear3 = torch.nn.Linear(5000, 1000)
         self.linear4 = torch.nn.Linear(512, 128)
-        self.linear5 = torch.nn.Linear(128, 4)
+        self.linear5 = torch.nn.Linear(128, 2)
 
     def forward(self, x):
         in_size = x.size(0)
         # print(x.shape)
+        # print(x.size)
         x = F.relu(self.conv1(x))
         x = self.mp1(x)
         x = F.relu(self.conv2(x))
