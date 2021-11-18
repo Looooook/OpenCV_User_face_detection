@@ -1,10 +1,7 @@
-import torch
-from PIL import Image
 from Model import *
 from Face_lib import *
 import cv2
 import time
-import scipy.misc
 
 
 def frame_to_tensor(frame):
