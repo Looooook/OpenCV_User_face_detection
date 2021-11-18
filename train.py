@@ -127,7 +127,7 @@ if __name__ == '__main__':
                     if int(sub_file.split('_')[0]) == int(float(predicted_str)):
                         # category = sub_file.split('_')[1]
                         category = sub_file.split('_')[1]
-
+                # 在原图像上显示 框 & 人名
                 cv2.putText(frame, category, (x, y - 10), color=(0, 255, 0), thickness=3,
                             fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale=1)
                 cv2.imshow('face_detection', frame)
@@ -135,5 +135,3 @@ if __name__ == '__main__':
                 break
         capture.release()
         cv2.destroyAllWindows()
-
-# 在原图像上显示 框 & 人名
