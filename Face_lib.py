@@ -20,10 +20,7 @@ class Face_lib(object):
 
         name_list.sort()
 
-        if face_name == None:
-            os.mkdir(self.face_lib_path + str(sub_file_counter) + '_' + face_name)
-        else:
-            os.mkdir(self.face_lib_path + str(sub_file_counter) + '_' + face_name)
+        os.mkdir(self.face_lib_path + str(sub_file_counter) + '_' + face_name)
 
         return str(sub_file_counter) + '_' + face_name
 
